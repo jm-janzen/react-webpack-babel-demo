@@ -1,0 +1,21 @@
+{
+  "name": "react-webpack-babel-demo",
+  "version": "1.0.0",
+  "description": "simple demo of capabilities of ReactJS (ES6), webpack, BabelJS, working in tandem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jm-janzen/react-webpack-babel-demo.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "keywords": [
+    "demo",
+    "test",
+    "react",
+    "webpack"
+  ],
+  "author": "JM Janzen",
+  "license": "ISC"
+}
