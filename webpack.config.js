@@ -2,10 +2,18 @@ var path = require('path');
 var webpack = require('webpack');
  
 module.exports = {
-	entry: './main.js',
+	entry: ['./main.js', './styles.scss'],
 	output: { path: __dirname, filename: 'bundle.js' },
 	module: {
-		loaders: [
+		rules: [
+			{
+				test: /\.(sass|scss)$/,
+				use: [
+					{ loader: "style-loader" },
+					{ loader: "css-loader" },
+					{ loader: "sass-loader" }
+				]
+			},
 			{
 				test: /.jsx?$/,
 				loader: 'babel-loader',
@@ -13,7 +21,7 @@ module.exports = {
 				query: {
 					presets: ['env', 'react']
 				}
-			}
+			},
 		]
 	},
 	devServer: {
